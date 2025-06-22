@@ -5,7 +5,6 @@ import 'package:netflix_clone/presentation/search/widgets/result_search.dart';
 
 class ScreenSearchPage extends StatelessWidget {
   const ScreenSearchPage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

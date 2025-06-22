@@ -22,7 +22,7 @@ class ResultSearchPageWidget extends StatelessWidget {
             mainAxisSpacing: 8,
             childAspectRatio: 1 / 1.4,
             shrinkWrap: true,
-            children: List.generate(20, (index) => Maincard()),
+            children: List.generate(20, (index) => SearchCardResultWidget()),
           ),
         ),
       ],
@@ -30,8 +30,8 @@ class ResultSearchPageWidget extends StatelessWidget {
   }
 }
 
-class Maincard extends StatelessWidget {
-  const Maincard({super.key});
+class SearchCardResultWidget extends StatelessWidget {
+  const SearchCardResultWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
