@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/presentation/widgets/main_card.dart';
-import 'package:netflix_clone/presentation/widgets/main_title.dart';
+import 'package:netflix_clone/presentation/home/widgets/home_card.dart';
+import 'package:netflix_clone/presentation/home/widgets/number_card.dart';
 
 class ScreenHomePage extends StatelessWidget {
   const ScreenHomePage({super.key});
@@ -8,14 +8,19 @@ class ScreenHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          MainTitle(title: "Released In This Year"),
-          Maincard(
-            imageurl:
-                "https://www.themoviedb.org/t/p/w1280/uOTDBabtxHA6szYKQNQe9Y7rFlv.jpg",
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              HomeCardSection(title: "Released In The Past Year"),
+              HomeCardSection(title: "Trending Now"),
+              NumberCardWidget(),
+              HomeCardSection(title: "Tense Dramas"),
+              HomeCardSection(title: "South Indian Cinema"),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

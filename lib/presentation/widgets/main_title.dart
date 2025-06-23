@@ -5,9 +5,9 @@ class MainTitle extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    return  Text(
+    return Text(
       title,
-      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
     );
   }
 }

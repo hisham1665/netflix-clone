@@ -5,13 +5,18 @@ class Maincard extends StatelessWidget {
   final String imageurl;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: NetworkImage(imageurl),
-          fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: 250,
+        width: 150,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(imageurl),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.circular(7),
         ),
-        borderRadius: BorderRadius.circular(7),
       ),
     );
   }
