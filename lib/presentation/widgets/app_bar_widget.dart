@@ -7,18 +7,22 @@ class AppBarWidget extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          title,
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-        ),
-        Spacer(),
-        Icon(Icons.cast, color: KWhiteColor, size: 30),
-        kwidth,
-        Container(color: Colors.blue, width: 25, height: 25),
-        kwidth,
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            title,
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+          Spacer(),
+          Icon(Icons.cast, color: KWhiteColor, size: 40),
+          kwidth,
+          Container(color: Colors.blue, width: 30, height: 30),
+          kwidth,
+        ],
+      ),
     );
   }
 }

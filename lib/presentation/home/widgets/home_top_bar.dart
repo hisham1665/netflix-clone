@@ -12,31 +12,31 @@ class HomeScreenTopBarWidget extends StatelessWidget {
       width: double.infinity,
       height: 100,
       color: Colors.black12,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.network(logoUrl, height: 50, width: 50),
-                Spacer(),
-                Icon(Icons.cast, color: KWhiteColor, size: 40),
-                kwidth,
-                Container(color: Colors.blue, width: 30, height: 30),
-              ],
-            ),
-            kHeight,
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                TextWidgetForTopBar(title: "TV Shows"),
-                TextWidgetForTopBar(title: "Movies"),
-                TextWidgetForTopBar(title: "Catagories"),
-              ],
-            ),
-          ],
-        ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Image.network(logoUrl, height: 50, width: 50),
+              ),
+              Spacer(),
+              Icon(Icons.cast, color: KWhiteColor, size: 40),
+              kwidth,
+              Container(color: Colors.blue, width: 30, height: 30),
+              kwidth,
+            ],
+          ),
+          kHeight,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              TextWidgetForTopBar(title: "TV Shows"),
+              TextWidgetForTopBar(title: "Movies"),
+              TextWidgetForTopBar(title: "Catagories"),
+            ],
+          ),
+        ],
       ),
     );
   }

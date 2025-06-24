@@ -11,11 +11,11 @@ class ScreenDownloadsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(50),
+        preferredSize: Size.fromHeight(60),
         child: AppBarWidget(title: "Downloads"),
       ),
       body: ListView.separated(
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.all(10),
         itemBuilder: (ctx, index) => _widgetList[index],
         separatorBuilder: (ctx, index) => SizedBox(height: 40),
         itemCount: _widgetList.length,
@@ -96,7 +96,7 @@ class _SmartDownloadWidget extends StatelessWidget {
       children: [
         Icon(Icons.settings, color: KWhiteColor),
         kwidth,
-        Text("Smart Downloads"),
+        Text("Smart Downloads", style: TextStyle(fontSize: 18)),
       ],
     );
   }
