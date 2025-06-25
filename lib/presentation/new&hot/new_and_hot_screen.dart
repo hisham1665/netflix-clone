@@ -6,12 +6,30 @@ class ScreenNewAndHot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
-        child: AppBarWidget(title: "New & Hot"),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(120),
+          child: AppBarWidget(title: "New & Hot"),
+        ),
+
+        body: TabBarView(
+          children: [
+            TabBarWidget(title: "Comming Soon"),
+            TabBarWidget(title: "EveryOne ' s Watching"),
+          ],
+        ),
       ),
-      body: Center(child: Text("New And Hot")),
     );
+  }
+}
+
+class TabBarWidget extends StatelessWidget {
+  const TabBarWidget({super.key, required this.title});
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Text(title));
   }
 }
