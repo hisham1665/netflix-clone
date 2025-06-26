@@ -42,11 +42,12 @@ class BottomBarWidgetNew extends StatelessWidget
         labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         unselectedLabelColor: KWhiteColor,
         indicatorSize: TabBarIndicatorSize.tab,
-        labelPadding: EdgeInsets.symmetric(horizontal: 10),
+        labelPadding: EdgeInsets.symmetric(horizontal: 15),
         indicator: BoxDecoration(
           color: KWhiteColor,
           borderRadius: BorderRadius.circular(30),
         ),
+        tabAlignment: TabAlignment.center,
         padding: EdgeInsets.only(bottom: 5),
         tabs: const [
           Tab(text: "🍿 Coming Soon"),
@@ -67,21 +68,3 @@ class BottomBarWidgetNew extends StatelessWidget
     }
   }
 }
-
-   /* return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            title,
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-          ),
-          Spacer(),
-          Icon(Icons.cast, color: KWhiteColor, size: 40),
-          kwidth,
-          Container(color: Colors.blue, width: 30, height: 30),
-          kwidth,
-        ],
-      ),
-    );*/

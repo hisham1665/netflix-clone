@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/presentation/new&hot/widgets/comming_soon.dart';
+import 'package:netflix_clone/presentation/new&hot/widgets/everyones_watching.dart';
 import 'package:netflix_clone/presentation/widgets/app_bar_widget.dart';
 
 class ScreenNewAndHot extends StatelessWidget {
@@ -15,21 +17,9 @@ class ScreenNewAndHot extends StatelessWidget {
         ),
 
         body: TabBarView(
-          children: [
-            TabBarWidget(title: "Comming Soon"),
-            TabBarWidget(title: "EveryOne ' s Watching"),
-          ],
+          children: [CommingSoonWidget(), EveryonesWatchingWidget(),],
         ),
       ),
     );
-  }
-}
-
-class TabBarWidget extends StatelessWidget {
-  const TabBarWidget({super.key, required this.title});
-  final String title;
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text(title));
   }
 }

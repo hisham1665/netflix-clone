@@ -47,9 +47,19 @@ class BottomButtonsWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          BottomSupportIconWidget(icon: Icons.add, title: 'My List'),
+          BottomSupportIconWidget(
+            icon: Icons.add,
+            title: 'My List',
+            size: 30,
+            fontsize: 16,
+          ),
           _PlayButtonWidget(),
-          BottomSupportIconWidget(icon: Icons.info, title: 'Info'),
+          BottomSupportIconWidget(
+            icon: Icons.info,
+            title: 'Info',
+            size: 30,
+            fontsize: 16,
+          ),
         ],
       ),
     );
@@ -57,19 +67,25 @@ class BottomButtonsWidget extends StatelessWidget {
 }
 
 class BottomSupportIconWidget extends StatelessWidget {
-  const BottomSupportIconWidget({
+   const BottomSupportIconWidget({
     super.key,
     required this.icon,
     required this.title,
+    required this.size,
+    required this.fontsize,
+    this.color = KWhiteColor,
   });
+  final Color color;
+  final double size;
+  final double fontsize;
   final IconData icon;
   final String title;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(icon, color: KWhiteColor, size: 30),
-        Text(title, style: TextStyle(fontSize: 16)),
+        Icon(icon, color: KWhiteColor, size: size),
+        Text(title, style: TextStyle(fontSize: fontsize , color: color)),
       ],
     );
   }
