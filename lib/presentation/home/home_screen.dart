@@ -36,8 +36,10 @@ class ScreenHomePage extends StatelessWidget {
                     HomeCardSection(title: "Released In The Past Year"),
                     HomeCardSection(title: "Trending Now"),
                     NumberCardWidget(),
+                    HomeCardSection(title: "Selecting For You"),
                     HomeCardSection(title: "Tense Dramas"),
                     HomeCardSection(title: "South Indian Cinema"),
+                    HomeCardSection(title: "Suspensful Movies"),
                   ],
                 ),
                 scrollNotifier.value == false
