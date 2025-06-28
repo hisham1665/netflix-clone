@@ -3,9 +3,10 @@ import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/constants.dart';
 import 'package:netflix_clone/core/links/urls.dart';
 import 'package:netflix_clone/presentation/home/widgets/hero_section.dart';
+import 'package:netflix_clone/presentation/new&hot/widgets/description_widget.dart';
+import 'package:netflix_clone/presentation/new&hot/widgets/image_Widget.dart';
 
-const String _imageurl =
-    "https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg";
+
 
 class CommingSoonWidget extends StatelessWidget {
   const CommingSoonWidget({super.key});
@@ -61,36 +62,7 @@ class CommingSoonContent extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Stack(
-                    children: [
-                      SizedBox(
-                        width: double.infinity,
-                        height: 200,
-                        child: Image.network(_imageurl),
-                      ),
-                      Positioned(
-                        bottom: 10,
-                        right: 10,
-                        child: CircleAvatar(
-                          radius: 22,
-                          backgroundColor: const Color.fromARGB(
-                            184,
-                            74,
-                            74,
-                            74,
-                          ),
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.volume_off_rounded,
-                              color: KWhiteColor,
-                            ),
-                            iconSize: 20,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  ImageWidgetForNewHot(image: horizontalImage,),
                   kHeight30,
                   Row(
                     children: [
@@ -146,19 +118,7 @@ class CommingSoonContent extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Text(
-                    "ThunderBolt",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: KWhiteColor,
-                    ),
-                  ),
-                  kHeight,
-                  Text(
-                    "After finding themselves ensnared in a death trap, seven disillusioned castoffs must embark on a dangerous mission that will force them to confront the darkest corners of their pasts.",
-                    style: TextStyle(fontSize: 14, color: Colors.grey),
-                  ),
+                  DescriptionWidget()
                 ],
               ),
             ),
@@ -168,3 +128,4 @@ class CommingSoonContent extends StatelessWidget {
     );
   }
 }
+
