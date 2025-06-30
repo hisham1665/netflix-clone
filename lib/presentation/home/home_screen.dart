@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// ignore: implementation_imports
 import 'package:flutter/src/rendering/viewport_offset.dart';
 import 'package:netflix_clone/core/constants.dart';
 import 'package:netflix_clone/presentation/home/widgets/hero_section.dart';
