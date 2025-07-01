@@ -20,14 +20,14 @@ class DownloadsBloc extends Bloc<DownloadsEvent, DownloadsState> {
           await _downloadRepo.getDownloadImage();
       emit(
         dowonloadOption.fold(
-          (l) => state.copyWith(
+          (failed) => state.copyWith(
             isLoading: false,
-            downloadSuccesOrFailureOption: Some(Left(l)),
+            downloadSuccesOrFailureOption: Some(Left(failed)),
           ),
-          (r) => state.copyWith(
+          (succes) => state.copyWith(
             isLoading: false,
-            downloads: r,
-            downloadSuccesOrFailureOption: Some(Right(r)),
+            downloads: succes,
+            downloadSuccesOrFailureOption: Some(Right(succes)),
           ),
         ),
       );
